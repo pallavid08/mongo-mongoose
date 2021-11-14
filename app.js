@@ -8,7 +8,6 @@ const mongoose = require('mongoose');
 //Use the .connect() method to connect to mongo atlas. Remember to use username and password
 mongoose
    .connect(
-      // 'mongodb+srv://pallavi:d0808@cluster0.mmebn.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
       `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.mmebn.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`
    )
    .then((result) => console.log('Connected to MONGO ATLAS'))
